@@ -9,16 +9,14 @@
         <div class="row">
           <% @cats.each do |c| %>
           <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 pb-2">
-            <article class="card">
+            <article class="card" style="width: 20rem">
               <%if c.item_picture.attached?%>
               <%= link_to (image_tag c.item_picture, alt: 'Cat', style:'width: 100%', class: 'transition'), cat_path(id:c.id)  %>
               <%else%>
               <%= image_tag("example.jpg")%>
               <% end %>
               <% if c.seller.present?%>
-              <br>
-              <p class="has-text-gray fg pt1">Sold by <%= link_to "#{c.user_seller}", profile_path(c.seller.profile) %>
-              </p>
+              <button type="button" class="text-white btn btn-sm btn-primary">Sold by <%= link_to "#{c.user_seller}", profile_path(c.seller.profile) %></button>
               <% end %>
               <div class="card-body">
                 <h5 class="card-title text-center"><%= link_to c.title, cat_path(id:c.id)%></h5>
@@ -29,18 +27,18 @@
                 <!-- card footer for seller -->
                 <div class="row d-flex justify-content-between align-items-center">
                   <div class="col-sm text-left">
-                    <%= link_to 'Modifier', edit_cat_path(c.id) %>
+                    <%= link_to 'Modifier', edit_cat_path(c.id), class:"btn btn-rounded btn-primary"%>
                   </div>
                   <div class="col-sm text-right">
-                    <%= link_to 'Retirer', c, method: :delete %>
+                    <%= link_to 'Supprimer', c, method: :delete, class: "btn btn-rounded btn-primary"%>
                   </div>
                 </div>
                 <% else %>
                 <!-- card footer for non-sellers-->
-                <div class="row d-flex justify-content-end align-items-center">
+                <div class="row d-flex justify-content-center align-items-center">
                   <div class="text-right pr-0">
                     <% if current_cart_cats_quantity(c.id) %>
-                    <span class="badge badge-pill badge-info">
+                    <span class="badge badge-pill badge-info d-block bg-primary ">
                       <!-- current_cart_cats_quantity method defined in helper -->
                       <%= current_cart_cats_quantity(c.id) %>
                     </span>
@@ -51,7 +49,10 @@
                   </div>
                   <% else %>
                   <div class="text-right px-1">
-                    <%= button_to "Ajouter", {action: 'create', controller: 'cart_cats', id: c.id, price: c.price}, {class:"btn btn-outline-primary btn-sm"} %>
+
+                    <%= button_to "Ajouter", {action: 'create', 
+                    controller: 'cart_cats', id: c.id, price: c.price}, 
+                    {class:"btn btn-rounded btn-primary"} %>
                   </div>
                   <% end %>
                 </div>
