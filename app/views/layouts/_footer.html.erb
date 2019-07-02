@@ -5,32 +5,63 @@
     <div class="tab-pane show active" id="component-2-2" role="tabpanel" aria-labelledby="component-2-2">
       <div class="component-example component-example-fit">
         <footer class="bg-dark text-white">
-          <div class="container pb-5">
-            <div class="row">
-              <div class="col">
-                <br>
-                <br>
-                 <div class="list-group list-group-minimal">
-                  <p class="list-group-item"><%= link_to "Découvir la team qui a réalisé ce site", team_project_path%></p>
-                </div>
-              
+          <div class="container">
+            <div class="row text-center d-flex justify-content-center pt-2 mb-3">
+              <div class="col-md-2 mb-2">
+                <h6 class="text-uppercase font-weight-bold">
+                  <%= link_to "A propos", team_project_path%>
+                </h6>
               </div>
-              <div class="col-center">
-                <%= image_tag("Kitten_logo.png", size: "150x150", alt: "Logo" )%>
+              <div class="col-md-2 mb-2">
+                <h6 class="text-uppercase font-weight-bold">
+                <%= link_to "Nos images", cats_path %>
+                </h6>
               </div>
-
-              <div class="col-md-6 text-center text-md-right">
-                    <div class="px-3 py-3 text-lg-center">
-                      <h3 class="heading heading-sm c-base-text-1 strong-600 text-uppercase ls-1">Satisfait ou remboursé</h3>
-                      <p class="c-white alpha-8 line-height-1_6">
-                          Qualité des photos garanties par Kitten-Studio
-                      </p>
-                  </div>
             </div>
-                  
+            
+            <hr class="rgba-white-light" style="margin: 0 15%;">
+
+              <div class="container sct-inner">
+                  <div class="row cols-xs-space cols-sm-space cols-md-space">
+
+                      <div class="col-lg-4 b-lg-right b-inverse">
+                          <div class="px-3 py-3 text-lg-center">
+                              <h6 class="strong-600 text-uppercase ls-1 font-weight-bold">Télechargement immédiat</h6>
+                              <p class="c-white alpha-8 line-height-1_6">
+                                  Photos téléchargeables en moins d'une minute 
+                              </p>
+                          </div>
+                      </div>
+
+                      <div class="col-lg-4 b-lg-right b-inverse">
+                          <div class="px-3 py-3 text-lg-center">
+                              <h6 class="text-uppercase ls-1 font-weight-bold">Pictures Corporation</h6>
+                              <p class="c-white alpha-8 line-height-1_6">
+                                  Nos photos sont certifiées PictCorporate-x-2018
+                              </p>
+                          </div>
+                      </div>
+
+                      <div class="col-lg-4">
+                        <div class="px-3 py-3 text-lg-center">
+                            <h6 class="text-uppercase ls-1 font-weight-bold">Secure payment</h6>
+                            <ul class="inline-links list-unstyled mt-2">
+                                <li>
+                                    <i class="fab fa-lg fa-cc-visa"></i>
+                                </li>
+                                <li>
+                                    <i class="fab fa-lg fa-cc-mastercard"></i>
+                                </li>
+                                <li>
+                                    <i class="fab fa-lg fa-cc-paypal"></i>
+                                </li>
+                            </ul>
+                        </div>
+                      </div>
+
+                  </div>
               </div>
 
-              </div>
             </div>
           </div>
         </footer>
