@@ -6,20 +6,20 @@
       <div class="component-example">
         <div class="container">
           <div class="row">
-            <div class="col-md-6">
-              <figure class="photo">
+            <div class="col-md-6 d-flex justify-centent-center align-items-center">
+              <figure class="photo" style="width: 23rem">
               <% if @cat.item_picture.attached?%>
               <%=image_tag @cat.item_picture, alt: @cat.title, class: "card-img-top image_cat"%>
               <% else %>
               <%= image_tag("example.jpg", class: "card-img-top image_cat",)%>
               <% end %>
               <% if @cat.seller.present?%>
-              <p class="has-text-gray fg pt1">Sold by <%= link_to "#{@cat.user_seller}", profile_path(@cat.seller.profile) %>
+              <p class="text-white bg-primary fg pt1">Vendu par <%= link_to "#{@cat.user_seller}", profile_path(@cat.seller.profile) %>
               </p>
               <% end %>
               </figure>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 d-flex justify-content-center align-items-center">
                 <div class="container">
                     <div class="col">
                       <div class="card">
@@ -35,25 +35,25 @@
                         <!-- card footer for seller -->
                           <div class="row d-flex justify-content-around align-items-center">
                             <div class="col text-left">
-                            <%= link_to 'Modifier', edit_cat_path(@cat.id), class:"btn btn-outline-primary btn-sm" %>
+                            <%= link_to 'Modifier', edit_cat_path(@cat.id), class:"btn btn-rounded btn-primary btn-sm" %>
                             </div>
                             <div class="col text-right">
-                            <%= link_to 'Retirer', @cat, method: :delete, class:"btn btn-warning btn-sm" %>
+                            <%= link_to 'Retirer', @cat, method: :delete, class:"btn btn-rounded btn-danger btn-sm" %>
                             </div>
                            </div>
                         <% else %>
                         <!-- card footer for non-sellers-->
-                          <div class="row d-flex justify-content-end">
+                          <div class="row d-flex justify-content-end align-items-center">
                             <div class="text-right pr-0">
                               <% if current_cart_cats_quantity(@cat.id) %>
-                              <span class="badge badge-pill badge-info">
+                              <span class="badge badge-pill badge-info d-block bg-primary">
                                 <!-- current_cart_cats_quantity method defined in helper -->
                                 <%= current_cart_cats_quantity(@cat.id) %>
                               </span>
                               <% end %>
                             </div>
                             <div class="text-right px-1">
-                              <%= button_to "Ajouter", {action: 'create', controller: 'cart_cats', id: @cat.id, price: @cat.price}, {class:"btn btn-outline-primary btn-sm"} %>
+                              <%= button_to "Ajouter", {action: 'create', controller: 'cart_cats', id: @cat.id, price: @cat.price}, {class:"btn btn-rounded btn-primary btn-sm"} %>
                             </div>
                           </div>
                           <% end %>
