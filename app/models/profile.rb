@@ -34,7 +34,7 @@ class Profile < ApplicationRecord
     if first_name.blank?
       user.email
     else
-      "#{first_name}"
+      first_name.to_s
     end
   end
 
