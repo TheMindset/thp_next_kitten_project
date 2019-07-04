@@ -12,11 +12,16 @@
 //
 //= require rails-ujs
 //= require activestorage
-//# require turbolinks
-//= require js/vendor
-//= require js/app
-//= require js/vendor
+//= require turbolinks
 //= require_tree .
+
+//= require js/vendor.min
+//= require js/vendor/jquery.accordion
+//= require js/vendor/jquery.selectric
+//= require js/vendor/modernizr
+//= require js/vendor/prism.js
+//= require js/app
+
 
 window.setTimeout(function () {
     $(".alert").fadeTo(500, 0).slideUp(500, function () {
