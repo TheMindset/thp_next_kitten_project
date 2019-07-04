@@ -31,10 +31,10 @@ class Profile < ApplicationRecord
   has_one_attached :profile_picture # active storage
 
   def full_name_or_email
-    if first_name.blank? || last_name.blank?
+    if first_name.blank?
       user.email
     else
-      "#{first_name} #{last_name}"
+      "#{first_name}"
     end
   end
 
