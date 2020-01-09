@@ -1,7 +1,25 @@
 [![CircleCI](https://circleci.com/gh/ocardinaux/thp_next_kitten_project.svg?style=svg)](https://circleci.com/gh/ocardinaux/thp_next_kitten_project)
 [![codecov](https://codecov.io/gh/ocardinaux/thp_next_kitten_project/branch/master/graph/badge.svg)](https://codecov.io/gh/ocardinaux/thp_next_kitten_project)
 
-# README
+
+![](/public/kitten-shop.png)
+
+# Kitten Image Shop
+
+## About
+
+Little Shop of kitten Image is a fictitious e-commerce site built by Cyril Avronsart, [cyril_A](https://github.com/belette06), Nicolas Zwiller, [NIcoZF](https://github.com/NIcoZF), 
+Vincent Leparoux, [Vincelep](https://github.com/Vincelep), Olivier Cardinaux, [ocardinaux](https://github.com/ocardinaux) and Guillaume Mulezi, [TheMindset](https://github.com/TheMindset)made at The Hacking Project. In our shop, users can add kitten images to their cart and by it, login, and "checkout" to place their orders. Merchant users can fulfill their components of an order, and admins have additional functionality to oversee the smooth operation of the site.
+
+The deployed site can be viewed here:
+
+https://kitten-project.herokuapp.com/
+
+Go ahead and make a user account, and see what you can do!
+
+## Schema
+
+![](/public/schema.png)
 
 ## EXTERNAL DEV LINKS
 
