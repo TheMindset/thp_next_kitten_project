@@ -8,7 +8,7 @@
 
 ## About
 
-Little Shop of kitten Image is a fictitious e-commerce site built by [Cyril Avronsart](https://github.com/belette06), [Nicolas Zwiller](https://github.com/NIcoZF), [Vincent Leparoux](https://github.com/Vincelep), Olivier Cardinaux, [ocardinaux](https://github.com/ocardinaux) and [Guillaume Mulezi](https://github.com/TheMindset)made at The Hacking Project. In our shop, users can add kitten images to their cart and by it, login, and "checkout" to place their orders. Merchant users can fulfill their components of an order, and admins have additional functionality to oversee the smooth operation of the site.
+Little Shop of kitten Image is a fictitious e-commerce site built by [Cyril Avronsart](https://github.com/belette06), [Nicolas Zwiller](https://github.com/NIcoZF), [Vincent Leparoux](https://github.com/Vincelep), Olivier Cardinaux, [ocardinaux](https://github.com/ocardinaux) and [Guillaume Mulezi](https://github.com/TheMindset) made at The Hacking Project. In our shop, users can add kitten images to their cart and by it, login, and "checkout" to place their orders. Merchant users can fulfill their components of an order, and admins have additional functionality to oversee the smooth operation of the site.
 
 The deployed site can be viewed here:
 
